@@ -37,6 +37,7 @@ db.once('open', function() {
 });
 
 app.use(session({
+  secret: "hello",
   store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
